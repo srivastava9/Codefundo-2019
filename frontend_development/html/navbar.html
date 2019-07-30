@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="/home/aditya/Desktop/Codefundo-2019/frontend_development/css/navbar.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="/home/aditya/Desktop/Codefundo-2019/frontend_development/js/navbar.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href=" "
+        ><img
+          src="/home/aditya/Desktop/Codefundo-2019/frontend_development/images/logo.png"
+          alt="VOTERIGHT"
+          class="logo"
+      /></a>
+      <ul class="navbar_ul">
+        <li class="navbar_li"><a href=" ">Candidate Profile</a></li>
+        <li class="navbar_li"><a href=" ">Popular Demands</a></li>
+        <li class="navbar_li"><a href=" ">Query & Problems</a></li>
+        <li class="navbar_li"><a href=" ">Contact Us</a></li>
+        <li class="navbar_li">
+          <a onclick="show_dropdownprofile()"
+            ><img
+              src="/home/aditya/Desktop/Codefundo-2019/frontend_development/images/profile_photo.png"
+              class="navbar_profile_img"
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown_notification" id="dropdown_profile">
+      <div class="triangle"></div>
+      <div class="heading_dropdown_notif">Profile<br /></div>
+      <hr />
+      <div class="dropdown_notification_body">
+        <div class="each_notification_body">
+          <img
+            class="profile_image"
+            src="/home/aditya/Desktop/Codefundo-2019/frontend_development/images/profile_photo.png"
+          />
+          <p class="profile_name">Aditya Srivastava</p>
+        </div>
+        <div class="dropdown_address">Gurhatta Patna City<br />Bihar</div>
+      </div>
+      <div class="dropdown_buttons">
+        <button class="dropdown_each_button ">Edit Profile</button>
+        <button class="dropdown_each_button">Sign Out</button>
+      </div>
+    </div>
+  </body>
+</html>

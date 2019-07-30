@@ -33,6 +33,7 @@ Our website will use ReactJS and Django for creating various features like candi
  1. Python
     * Numpy/Pandas
     * Matplotlib
+    * Other Libraries
  2. ReactJs
  3. Django
  4. HTML
