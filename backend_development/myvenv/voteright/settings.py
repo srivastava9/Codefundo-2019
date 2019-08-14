@@ -16,7 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "template")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
-# print(TEMPLATE_DIR)
+print(STATIC_DIR)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -113,5 +113,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATICFILES_DIR = [STATIC_DIR]
+STATICFILES_DIRS = [STATIC_DIR]
 STATIC_URL = "/static/"

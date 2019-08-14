@@ -22,9 +22,11 @@ a {
   text-decoration: none;
   color: #596e78;
   cursor: pointer;
+  border-bottom: 2px solid white;
 }
 a:hover {
   color: #eb5255;
+  border-bottom: 2px solid #eb5255;
 }
 .navbar_ul {
   width: 750px;

@@ -1,0 +1,12 @@
+.profile_page {
+  width: 95%;
+  background-color: #fffffa;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.side_profile_page {
+  width: 30%;
+  background-color: #fafafa;
+  font-size: 17px;
+}
