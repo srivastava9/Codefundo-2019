@@ -1,8 +1,10 @@
-## VoteRight
+# VoteRight
+
 *Application to know your Candidates better and Increase Effective Dialogue with them*
 
 ## Features
 
+<<<<<<< HEAD
 * **Candidate's Profile** - Profiles of candidates informing users about their educational qualification, net assets and previous political performance, criminal record(if any), attendance in legislative assembly etc.
 
 * **User's Demand/Need** - A list of popular demands/problems based on users' input, comparing various candidates' previous work and current proposals for every demand/problem in his/her constituency.
@@ -14,6 +16,19 @@
 ## How User will get Started
 
 1. The users will be divided into 2 seperate categories - voters and candidates. Each one will create an account on the website.
+=======
+* **Candidate's Profile** - Profiles of candidates informing users about their educational qualification, net assets, previous political performance, criminal record(if any), attendance in legislative assembly etc.
+
+* **Users' Demand/Need** - A list of popular demands/problems based on users' input, comparing various candidates' previous work and current proposals for every demand/problem in his/her constituency.
+
+* **Candidate Comparison** - A graphical/statistical comparison of candidates' various features such as assets, criminal records and proposals for each demands of their constituency.
+
+* **Query-response interaction with Candidates** - The candidates can respond to valid and popular queries asked by users, thereby increasing dialogue and communication between them.
+
+## How User will get Started
+
+1. The users will be divided into 2 categories - voters and candidates. Each one will create an account on the website.
+>>>>>>> c2c181506ce0caed1a84d306774cb089c78a3f8d
 2. Voters will be required to provide some basic information about them and the demands/problems faced by them.
 3. Candidates will be required to provide information about them such as educational qualification, net assets, etc. and their current proposals and schemes for upcoming elections.
 4. Voters can see candidates' profiles, past performance, proposals and even compare various aspects among the candidates.
@@ -25,16 +40,28 @@
 Our website will use ReactJS and Django for creating various features like candidates' profiles, query-response system and segregate demands based on keywords using Python libraries. We will give a statistical visualization using NumPy, Pandas etc. We will use **Azure BlockChain** for implementing and deploying our project.
 
 ## Dataset
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2c181506ce0caed1a84d306774cb089c78a3f8d
 *We are using datasets from these websites :-*
  1. www.myneta.info
  2. https://eci.gov.in/
  3. https://data.gov.in/
+<<<<<<< HEAD
+=======
+
+>>>>>>> c2c181506ce0caed1a84d306774cb089c78a3f8d
 ## Technology Used
  1. Python
     * Numpy/Pandas
     * Matplotlib
     * Other Libraries
+<<<<<<< HEAD
  2. ReactJs
+=======
+ 2. ReactJS
+>>>>>>> c2c181506ce0caed1a84d306774cb089c78a3f8d
  3. Django
  4. HTML
  5. CSS

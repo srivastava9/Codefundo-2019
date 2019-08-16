@@ -1,0 +1,107 @@
+#container{
+  display: flex;
+  margin-top: 5%;
+}
+
+#query_list{
+  border: solid;
+  border-color: #EB5255;
+  border-width: 1px;
+
+  width: 30%;
+  margin-right: 2%;
+  margin-left: 6%;
+  max-height: 90vh;
+
+  overflow: auto;
+}
+
+#query_heading{
+  background-color: #EB5255;
+  color: white;
+
+  margin-bottom: 10px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+
+  font-size: 30px;
+}
+
+#response{
+  border: solid;
+  border-color: #596E78;
+  border-width: 20px;
+  border-width: 2px;
+
+  width: 50%;
+  min-height: 70vh;
+  max-height: 90vh;
+}
+
+#upper_div_in_response{
+  display: flex;
+  justify-content: space-around;
+}
+
+#question_display{
+  font-size: 30px;
+  padding: 10px;
+}
+
+#candidate_mini_profile{
+  display: flex;
+}
+
+img{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.question {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  
+  border: solid;
+  border-color: #EB5255;
+  border-width: .05px;
+
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  overflow: auto;
+}
+
+#candidate_tag_container{
+  display: none;
+  cursor: pointer;
+}
+
+#candidate_tag{
+  background-color: white;
+  color: #596E78;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .question:hover {
+  background-color: #ccc; 
+}
+
+.answer {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
