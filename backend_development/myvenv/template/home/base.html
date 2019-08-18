@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+  <link href="{% static 'css/home/navbar.css'%}" rel="stylesheet" type="text/css" />
+  <script href="{% static 'js/home/navbar.js'%}"></script>
+  {% block css_script_block %} {% endblock %}
+  <title>Voteright-{% block title_block %}Home{% endblock %}</title>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href=" "><img src="{% static 'images/logo.png' %}" alt="VOTERIGHT" class="logo" /></a>
+    <ul class="navbar_ul">
+      <li class="navbar_li"><a href=" ">Candidate Profile</a></li>
+      <li class="navbar_li"><a href=" ">Popular Demands</a></li>
+      <li class="navbar_li"><a href=" ">Query & Problems</a></li>
+      <li class="navbar_li"><a href=" ">Contact Us</a></li>
+      <li class="navbar_li">
+        <a onclick="show_dropdownprofile()"><img src="{% static 'images/profile_photo.png' %}"
+            class="navbar_profile_img" /></a>
+      </li>
+    </ul>
+  </div>
+  <div class="dropdown_notification" id="dropdown_profile">
+    <div class="triangle"></div>
+    <div class="heading_dropdown_notif">Profile<br /></div>
+    <hr />
+    <div class="dropdown_notification_body">
+      <div class="each_notification_body">
+        <img class="profile_image"
+          src="/home/aditya/Desktop/Codefundo-2019/frontend_development/images/profile_photo.png" />
+        <p class="profile_name">Aditya Srivastava</p>
+      </div>
+      <div class="dropdown_address">Gurhatta Patna City<br />Bihar</div>
+    </div>
+    <div class="dropdown_buttons">
+      <button class="dropdown_each_button ">Edit Profile</button>
+      <button class="dropdown_each_button">Sign Out</button>
+    </div>
+  </div>
+  <div>
+    {% block body_block %} here goes body part {% endblock %}
+  </div>
+</body>
+
+</html>
