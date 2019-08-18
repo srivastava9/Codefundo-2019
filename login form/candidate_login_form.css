@@ -1,15 +1,19 @@
 body{
-	background-color: #EB5255;
+	background-color: #f1f1f1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: lighter;
 }
 
 #candidate_form_box{
 	background-color: #fafafa;
-    margin: 150px auto;
+    margin: 50px auto;
     padding: 40px;
     width: 70%;
     min-width: 300px;
     min-height: 50%;
     border-radius: 5px;
+    border: ;
+    box-shadow: 10px 10px 20px grey;
 }
 
 #container{
@@ -17,14 +21,23 @@ body{
 	margin-top: 50px;
 }
 
+#heading{
+	font-weight: lighter;
+	font-size: 35px;
+	color: #EB5255;
+	margin-bottom: 30px;
+	text-align: center;
+	margin-top: 5px;
+}
 
+hr{
+	border: solid;
+	border-color: #EB5255;
+	border-width: 1.5px;
+}
 
 /*SECTION-demand list*/
 #demands_list{
-  border: solid;
-  border-color: #EB5255;
-  border-width: 1px;
-
   width: 30%;
   margin-right: 2%;
 /*  margin-left: 6%;*/
