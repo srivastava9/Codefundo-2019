@@ -18,61 +18,111 @@
 	</div>
 	<div id="list_container">
 		<div class ="demand_bar">
-			<div id="demand_serial_no">#</div>
-			<div id="demand_demand_name">kadskdas jklad</div>
-			<div id="demand_demand_count">687626</div>
-			<div id="demand_query_count">6846</div>
-			<div id="demand_see_proposals_button">
-				<button>See proposals</button>
+			<div class="demand_serial_no">1</div>
+			<div class="demand_demand_name">Healthcare</div>
+			<div class="demand_demand_count">687626</div>
+			<div class="demand_query_count">6846</div>
+			<div class="demand_see_proposals_button">
+				<button onclick='display_popup_background();'>Compare candidates</button>
 			</div>
 		</div>
 
 		<div class="demand_bar">
-			<div id="demand_serial_no">#</div>
-			<div id="demand_demand_name">kadskdas jklad</div>
-			<div id="demand_demand_count">687626</div>
-			<div id="demand_query_count">6846</div>
-			<div id="demand_see_proposals_button">
-				<button>See proposals</button>
+			<div class="demand_serial_no">2</div>
+			<div class="demand_demand_name">Security</div>
+			<div class="demand_demand_count">687626</div>
+			<div class="demand_query_count">6846</div>
+			<div class="demand_see_proposals_button">
+				<button onclick='display_popup_background();'>Compare candidates</button>
 			</div>
 		</div>
 
 		<div class="demand_bar">
-			<div id="demand_serial_no">#</div>
-			<div id="demand_demand_name">kadskdas jklad</div>
-			<div id="demand_demand_count">687626</div>
-			<div id="demand_query_count">6846</div>
-			<div id="demand_see_proposals_button">
-				<button>See proposals</button>
+			<div class="demand_serial_no">3</div>
+			<div class="demand_demand_name">Roads</div>
+			<div class="demand_demand_count">687626</div>
+			<div class="demand_query_count">6846</div>
+			<div class="demand_see_proposals_button">
+				<button onclick='display_popup_background();'>Compare candidates</button>
 			</div>
 		</div>
 
 		<div class="demand_bar">
-			<div id="demand_serial_no">#</div>
-			<div id="demand_demand_name">kadskdas jklad</div>
-			<div id="demand_demand_count">687626</div>
-			<div id="demand_query_count">6846</div>
-			<div id="demand_see_proposals_button">
-				<button>See proposals</button>
+			<div class="demand_serial_no">4</div>
+			<div class="demand_demand_name">Sewerage</div>
+			<div class="demand_demand_count">687626</div>
+			<div class="demand_query_count">6846</div>
+			<div class="demand_see_proposals_button">
+				<button onclick='display_popup_background();'>Compare candidates</button>
 			</div>
 		</div>
 
 		<div class="demand_bar">
-			<div id="demand_serial_no">#</div>
-			<div id="demand_demand_name">kadskdas jklad</div>
-			<div id="demand_demand_count">687626</div>
-			<div id="demand_query_count">6846</div>
-			<div id="demand_see_proposals_button">
-				<button>See proposals</button>
+			<div class="demand_serial_no">5</div>
+			<div class="demand_demand_name">Drinking water</div>
+			<div class="demand_demand_count">687626</div>
+			<div class="demand_query_count">6846</div>
+			<div class="demand_see_proposals_button">
+				<button onclick='display_popup_background();'>Compare candidates</button>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="aa"></div>
-	<div class="aa"></div>
-	<div class="aa"></div>
-	<div class="aa"></div>
-	<div class="aa"></div>
+<div id="comparison_popup">
+	<div id="popup_background">
+		<div id="popupbox_container">
+			<div id="popup_box">
+				<div id="candidate_info_tab">
+					<div class="candidate_mini_profile">
+						<div class="candidates_image_container">
+							<img src="C:\Users\Lenovo\Downloads\indexq.jpg" class="candidates_image">
+							<br><br>
+						</div>
+						<div class="candidate_name">Name name name</div>
+						<div class="candidate_party">Party party</div>					
+					</div>
+					<hr>
+					<div class="candidate_proposal">
+						<h2>Proposals</h2>
+						<p>I propose this and this and this and this and this and this and this and this and this and this and this and<span class="dots">. . .</span> <span class="more_content">this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and</span> </p>
+						<button class="see_more" onclick="seeMore();">See more</button>
+					</div>
+					<hr>
+					<div class="candidate_previouswork">
+						<h2>Previous work</h2>
+						<p>I have previosly done this and this and this and this and this and this and this and this and this and this and this and<span class="dots">. . .</span> <span class="more_content">this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and</span> </p>
+						<button class="see_more" onclick="seeMore();">See more</button>
+					</div>
+				</div>
 
+				<div id="candidate_info_tab">
+					<div class="candidate_mini_profile">
+						<div class="candidates_image_container">
+							<img src="C:\Users\Lenovo\Downloads\indexq.jpg" class="candidates_image">
+							<br><br>
+						</div>
+						<div class="candidate_name">Name name name</div>
+						<div class="candidate_party">Party party</div>					
+					</div>
+					<hr>
+					<div class="candidate_proposal">
+						<h2>Proposals</h2>
+						<p>I propose this and this and this and this and this and this and this and this and this and this and this and<span class="dots">. . .</span> <span class="more_content">this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and</span> </p>
+						<button class="see_more" onclick="seeMore();">See more</button>
+					</div>
+					<hr>
+					<div class="candidate_previouswork">
+						<h2>Previous work</h2>
+						<p>I have previosly done this and this and this and this and this and this and this and this and this and this and this and<span class="dots">. . .</span> <span class="more_content">this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and this and</span> </p>
+						<button class="see_more" onclick="seeMore();">See more</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="demands.js"></script>
 </body>
+
 </html>

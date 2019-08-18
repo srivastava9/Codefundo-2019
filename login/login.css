@@ -1,6 +1,15 @@
 	body{
+		background-color: #F1F1F1;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	#main_box{
+		width: 70vw;
+		height: 80vh;
 		display: flex;
-		font-family: times-new-roman;
+		margin: auto;
+		margin-top: 5%;
+		box-shadow: 10px 10px 20px grey;
 	}
 
 	h1{
@@ -15,32 +24,37 @@
 
 	#features{
 		margin-top: 10%;
-		padding-left: 15%;
+		padding-left: 50px;
+		padding-right: 30px;
 	}
 
 	li{
 		padding-top: 5%;
 	}
 
-	#register-as-text{
-		text-align: center;
-		padding-bottom: 5px;
-	}
-
 	#right-box{
-		background-color: #EB5255;
-		width: 50%;
-		height: 100vh;
+		background-color: #fafafa;
+		width: 40%;
+		overflow: auto;
 	}
 
 	#left-box{
-		background-color: #FAFAFA;
-		width: 50%;
-		height: 100vh;
+		background-color: #fafafa;
+		width: 60%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-image: linear-gradient(to right, rgba(235, 82, 85,1), rgba(235, 82, 85,.8));
+		color: rgba(250,250,250);
+	}
+
+	#register-as-text{
+		text-align: center;
+		padding-bottom: 5px;
+		margin-top: 30px;
 	}
 
 	#login_or_signup_buttons{
-		background-color: #EB5255;
 		margin-right: auto;
 		margin-left: auto;
 		margin-bottom: auto;
@@ -55,7 +69,7 @@
 		margin-left: auto;
 		margin-bottom: auto;
 		margin-top: 0px;
-		width: 60%;
+		width: 80%;
 		height: 90%;
 		border-radius: 3%;
 		display: none;
@@ -95,6 +109,7 @@
  		 display: inline-block;
  		 border: none;
  		 background: #f1f1f1;
+ 		 font-color: white;
 	}
 
 	input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
@@ -125,10 +140,19 @@
 	}
 
 	#signup{
-		margin-top: 5%;
+		margin-top: 10%;
+		margin-bottom: 10%;
 	}
 
 	#login_button{
-		margin-top: 10%;
+		margin-top: 20%;
 	}
 	
+	#voter_button,#candidate_button{
+		width: 100px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 10px;
+	}
