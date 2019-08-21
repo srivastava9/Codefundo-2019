@@ -27,28 +27,19 @@ Our website will use ReactJS and Django for creating various features like candi
 
 ## Dataset
 
-# <<<<<<< HEAD
 
-> > > > > > > c2c181506ce0caed1a84d306774cb089c78a3f8d
-> > > > > > > _We are using datasets from these websites :-_
+We are using datasets from these websites :-_
 
 1.  www.myneta.info
 2.  https://eci.gov.in/
 3.  https://data.gov.in/
-    <<<<<<< HEAD
-    =======
 
-> > > > > > > c2c181506ce0caed1a84d306774cb089c78a3f8d
 
 ## Technology Used
 
-1.  Python
-    _ Numpy/Pandas
-    _ Matplotlib \* Other Libraries
-    <<<<<<< HEAD
-2.  # ReactJs
-3.  ReactJS
-    > > > > > > > c2c181506ce0caed1a84d306774cb089c78a3f8d
+1.  Python Libraries
+2. JavaScript
+3. Azure Blockchain
 4.  Django
 5.  HTML
 6.  CSS
