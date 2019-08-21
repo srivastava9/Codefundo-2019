@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="candidate_login_form.css">
+</head>
+
+<body>
+	<form id="candidate_form_box">
+		<div id="description">
+			<h1 id="heading">Tell us about your views</h1>
+			<hr>
+			<p>Below are the various areas of work where the voters in your constituency face problems in and where they think more should be done.<br><br>
+				Tell us about any previous work done by you in these fields and also what are your proposed plans about problems in these sectors.<br><br>
+				Select a category from the left menu and enter your previous works and future plans or manifesto points in the textbox at right by choosing appriopriate option.<br><br>
+				<b>Note: </b> You can enter upto 10 entries only.</p>
+		</div>
+
+		<div id="container">
+			<div id="demands_list">
+				<button class="demand_name">demand1</button>
+				<button class="demand_name">demand2</button>
+				<button class="demand_name">demand3</button>
+				<button class="demand_name">demand4</button>
+				<button class="demand_name">demand5</button>
+				<button class="demand_name">demand6</button>
+				<button class="demand_name">demand7</button>
+				<button class="demand_name">demand8</button>
+			</div>
+
+			<div id="candidate_response_container">
+				<div id="previouswork_or_proposal_selectorbuttons_container">
+					<button id="previouswork_button" onclick="open_previouswork()">Enter any previous work done by you in this field</button>
+					<button id="proposals_button" onclick="open_proposal()">Enter your proposed plans</button>
+				</div>
+
+				<div id="input_fields">
+					<div id="previouswork_textbox_container">
+						Entry number 1<br>
+						<textarea type="text" placeholder="Add a brief and precise description of what all you've previously done in the mentioned field of work...." ></textarea>
+					</div>
+
+					<div id="proposals_textbox_container">
+						Entry number 1<br>
+						<textarea type="text" placeholder="Add a brief and precise description of what all you propose to do in the mentioned field of work...." ></textarea>
+					</div>
+				</div>
+				<div id="buttons">
+					<button id="add_more_button" class="endpage_buttons" onclick="add_more();">Add more +</button>
+					<button id="submit_button" class="endpage_buttons" >Submit</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="candidate_login_form.js"></script>
+</body>
+</html>
