@@ -7,85 +7,130 @@
 {% block title_block %}
 Login-Page
 {% endblock %}
+{% block navbar_block %}
+{% endblock %}
 {% block body_block%}
 <div class="login_box">
 
-    <div id="left-box">
-        <h1 id="heading">Heading</h1>
-
-        <div id="features">
-            <h3>features</h3>
-            <ul>
-                <li>feature 1</li>
-                <li>feature 2</li>
-                <li>feature 3</li>
-                <li>feature 4</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="right-box">
-        <div id="login_or_signup_buttons" align="center">
-            <a href="/accounts/login"><button onclick="open_login()" id="login_button_selector">Login</button></a>
-
-            <a href="/accounts/register"><button onclick="open_signup()" id="signup_button_selector">
-                    Signup
-                </button></a>
+    <div id="main_box">
+        <div id="left-box">
+            <!-- 			<h1 id="heading">Know Right!  Vote Right!</h1> -->
+            <div class="logo_image_div">
+                <img class="logo_image" src="{% static 'images/logo.png' %}">
+            </div>
+            <div id="features">
+                <h3>VoteRight helps connect voters with candidates in their constituencies and helps them get to know
+                    each other
+                    better.</h3>
+                <ul>
+                    <li>View candidate's complete profile</li>
+                    <li>Compare among various candidates</li>
+                    <li>Know what are the top demands in your constituency</li>
+                    <li>Know candidate's future plans and previous work done on various problems</li>
+                    <li>Ask any queries to your candidates and know their views</li>
+                </ul>
+            </div>
         </div>
 
-        <div id="login_form_box">
-            <form id="login_form" method="POST" action=".">
-                <p>Username</p>
-                <input type="text" placeholder="Enter your username" name="_login" required />
 
-                <p>Password</p>
-                <input type="password" placeholder="Enter your Password" name="password_login" required />
+        <div id="right-box">
 
-                <div id="login" align="center">
-                    <button id="login_button">Login</button>
-                </div>
-            </form>
-        </div>
-        <div id="signup_form_box">
-            <form id="signup_form">
-                <p id="register-as-text">Register as :</p>
+            <div id="login_or_signup_buttons" align="center">
 
-                <div id="user_type_buttons" align="center">
-                    <button onclick="button_click_voter()" id="voter_button">
-                        Voter
-                    </button>
+                <a href="{% url 'login' %}"><button onclick="open_login()" id="login_button_selector">Login</button></a>
 
-                    <button onclick="button_click_candidate()" id="candidate_button">
-                        Candidate
-                    </button>
-                </div>
+                <a href="{% url 'register' %}"> <button onclick="open_signup()"
+                        id="signup_button_selector">Signup</button></a>
 
-                <p>Name</p>
-                <input type="text" placeholder="Enter your name" name="name" required />
+            </div>
 
-                <p>State</p>
-                <input type="text" placeholder="Enter your state" name="state" required />
+            <div id="login_form_box">
+                <form id="login_form">
 
-                <p>District</p>
-                <input type="text" placeholder="Enter your district" name="district" required />
+                    <p>Username</p>
+                    <input type="text" placeholder="Enter your username" name="_login" required>
+                    <br>
+                    <br>
 
-                <p>Pincode</p>
-                <input type="number" placeholder="Enter your Pincode" name="pincode" required />
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter your Password" name="password_login" required>
 
-                <p>Aadhar Number</p>
-                <input type="number" placeholder="Enter your 12-digit Aadhar number" name="aadhar" required />
+                    <div id="login" align="center">
+                        <button id="login_button">Login</button>
+                    </div>
 
-                <p>Username</p>
-                <input type="text" placeholder="Enter your username" name="username_signup" required />
+                </form>
+            </div>
+            <div id="signup_form_box">
 
-                <p>Password</p>
-                <input type="password" placeholder="Enter your Password" name="password_signup" required />
 
-                <div id="signup" align="center">
-                    <button id="signup_button">Sign up</button>
-                </div>
-            </form>
+
+                {% if user_form.errors %}
+                <p>Oops There are some Errors:</p>
+                {{user_form.errors}}
+                {% endif %}
+                {% if profile_form.errors %}
+                <p>Oops There are some Errors:</p>
+                {{profile_form.errors}}
+                {% endif %}
+                <form id="signup_form" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <p id="register-as-text">Register as :</p>
+
+                    <div id='user_type_buttons' align="center">
+                        <ul class="user_type_check">
+                            {% for choice in profile_form.Usertype_choice.field.choices %}
+                            <li>
+                                <input type="radio" name="my_choice_field" value="{{choice.0}}" required
+                                    {% ifequal profile_form.Usertype_choice.data choice.0 %} checked="checked"
+                                    {% endifequal %} />
+                                <label for="">{{choice.1}}</label>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <!-- <input onclick="button_click_voter()" type="radio" id="voter_button" value="{{profile_form.Usertype_choice.">Voter</button>
+
+                        <button onclick="button_click_candidate()" id="candidate_button">Candidate</button> -->
+
+                    </div>
+
+                    <p>Name</p>
+                    {{user_form.first_name}}
+                    <!-- <input type="text" placeholder="Enter your name" name="name" required> -->
+
+                    <p>State</p>
+                    {{profile_form.State}}
+                    <!-- <input type="text" placeholder="Enter your state" name="state" required> -->
+
+                    <p>District</p>
+                    {{profile_form.District}}
+                    <!-- <input type="text" placeholder="Enter your district" name="district" required> -->
+
+                    <p>Pincode</p>
+                    {{profile_form.Pincode}}
+                    <!-- <input type="number" placeholder="Enter your Pincode" name="pincode" required> -->
+
+                    <p>Aadhar Number</p>
+                    {{profile_form.AadharNo}}
+                    <!-- <input type="number" placeholder="Enter your 12-digit Aadhar number" name="aadhar" required> -->
+
+                    <p>Username</p>
+                    {{user_form.username}}
+                    <!-- <input type="text" placeholder="Enter your username" name="username_signup" required> -->
+
+                    <p>Password</p>
+                    {{user_form.password}}
+                    <!-- <input type="password" placeholder="Enter your Password" name="password_signup" required> -->
+
+                    <div id="signup" align="center">
+                        <button type="submit" value="Sign Up" name="Submit" id="signup_button">Sign Up</button>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
     </div>
 </div>
+
 {% endblock %}

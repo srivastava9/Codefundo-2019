@@ -7,84 +7,104 @@
 {% block title_block %}
 Login-Page
 {% endblock %}
+{% block navbar_block %}
+{% endblock %}
 {% block body_block%}
 <div class="login_box">
 
-  <div id="left-box">
-    <h1 id="heading">Heading</h1>
-
-    <div id="features">
-      <h3>features</h3>
-      <ul>
-        <li>feature 1</li>
-        <li>feature 2</li>
-        <li>feature 3</li>
-        <li>feature 4</li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="right-box">
-    <div id="login_or_signup_buttons" align="center">
-      <a href="/accounts/login"><button onclick="open_login()" id="login_button_selector">Login</button></a>
-
-      <a href="/accounts/register"><button onclick="open_signup()" id="signup_button_selector">
-          Signup
-        </button></a>
-    </div>
-
-    <div id="login_form_box">
-      <form id="login_form" method="POST" action="/accounts/login">
-        <p>Username</p>
-        <input type="text" placeholder="Enter your username" name="_login" required />
-
-        <p>Password</p>
-        <input type="password" placeholder="Enter your Password" name="password_login" required />
-
-        <div id="login" align="center">
-          <button id="login_button">Login</button>
+  <div id="main_box">
+    <div id="left-box">
+      <!-- 			<h1 id="heading">Know Right!  Vote Right!</h1> -->
+      <div class="logo_image_div">
+        <img class="logo_image" src="{% static 'images/logo.png' %}">
+      </div>
+      <div id="features">
+        <h3>VoteRight helps connect voters with candidates in their constituencies and helps them get to know each other
+          better.</h3>
+        <div>{% if user.is_authenticated %}
+          Hey {{user.username}}
+          <a href="/home/logout">Logout</a>
+          {% else %}
+          Hello Please Login!!
+          {% endif %}
         </div>
-      </form>
+        <ul>
+          <li>View candidate's complete profile</li>
+          <li>Compare among various candidates</li>
+          <li>Know what are the top demands in your constituency</li>
+          <li>Know candidate's future plans and previous work done on various problems</li>
+          <li>Ask any queries to your candidates and know their views</li>
+        </ul>
+      </div>
     </div>
-    <div id="signup_form_box">
-      <form id="signup_form">
-        <p id="register-as-text">Register as :</p>
 
-        <div id="user_type_buttons" align="center">
-          <button onclick="button_click_voter()" id="voter_button">
-            Voter
-          </button>
 
-          <button onclick="button_click_candidate()" id="candidate_button">
-            Candidate
-          </button>
-        </div>
+    <div id="right-box">
 
-        <p>Name</p>
-        <input type="text" placeholder="Enter your name" name="name" required />
+      <div id="login_or_signup_buttons" align="center">
 
-        <p>State</p>
-        <input type="text" placeholder="Enter your state" name="state" required />
+        <button onclick="open_login()" id="login_button_selector">Login</button>
 
-        <p>District</p>
-        <input type="text" placeholder="Enter your district" name="district" required />
+        <button onclick="open_signup()" id="signup_button_selector">Signup</button>
 
-        <p>Pincode</p>
-        <input type="number" placeholder="Enter your Pincode" name="pincode" required />
+      </div>
 
-        <p>Aadhar Number</p>
-        <input type="number" placeholder="Enter your 12-digit Aadhar number" name="aadhar" required />
+      <div id="login_form_box">
+        <form id="login_form">
 
-        <p>Username</p>
-        <input type="text" placeholder="Enter your username" name="username_signup" required />
+          <p>Username</p>
+          <input type="text" placeholder="Enter your username" name="_login" required>
+          <br>
+          <br>
 
-        <p>Password</p>
-        <input type="password" placeholder="Enter your Password" name="password_signup" required />
+          <p>Password</p>
+          <input type="password" placeholder="Enter your Password" name="password_login" required>
 
-        <div id="signup" align="center">
-          <button id="signup_button">Sign up</button>
-        </div>
-      </form>
+          <div id="login" align="center">
+            <button id="login_button">Login</button>
+          </div>
+
+        </form>
+      </div>
+      <div id="signup_form_box">
+        <form id="signup_form">
+          <p id="register-as-text">Register as :</p>
+
+          <div id='user_type_buttons' align="center">
+
+            <button onclick="button_click_voter()" id="voter_button">Voter</button>
+
+            <button onclick="button_click_candidate()" id="candidate_button">Candidate</button>
+
+          </div>
+
+          <p>Name</p>
+          <input type="text" placeholder="Enter your name" name="name" required>
+
+          <p>State</p>
+          <input type="text" placeholder="Enter your state" name="state" required>
+
+          <p>District</p>
+          <input type="text" placeholder="Enter your district" name="district" required>
+
+          <p>Pincode</p>
+          <input type="number" placeholder="Enter your Pincode" name="pincode" required>
+
+          <p>Aadhar Number</p>
+          <input type="number" placeholder="Enter your 12-digit Aadhar number" name="aadhar" required>
+
+          <p>Username</p>
+          <input type="text" placeholder="Enter your username" name="username_signup" required>
+
+          <p>Password</p>
+          <input type="password" placeholder="Enter your Password" name="password_signup" required>
+
+          <div id="signup" align="center">
+            <button id="signup_button">Sign up</button>
+          </div>
+
+        </form>
+      </div>
     </div>
   </div>
 </div>

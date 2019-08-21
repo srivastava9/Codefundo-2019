@@ -34,7 +34,7 @@ a:hover {
   justify-content: space-evenly;
   text-decoration: none;
   list-style: none;
-  margin-top:-20px;
+  /* margin-top:-20px; */
 }
 .dropdown_notification {
   margin-top: 11px;
@@ -80,7 +80,7 @@ a:hover {
   width: 25px;
   border-radius: 6px 0px 0px 0px;
   transform: rotate(45deg);
-  background-color: #fff;
+  background-color:  #fafafa;
 }
 
 .heading_dropdown_notif {

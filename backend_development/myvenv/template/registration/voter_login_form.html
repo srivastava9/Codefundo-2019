@@ -1,0 +1,230 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block css_script_block %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/home/voter_login_form.css' %}">
+<script type="text/javascript" src="{% static 'js/home/voter_login_form.js' %}"></script>
+{% endblock css_script_block %}
+
+
+{% block title_block %} User's Demand
+{% endblock title_block %}
+
+
+{% block body_block %}
+
+
+<div>
+	<form id="form_box" method="POST">
+		{% csrf_token %}
+		<div id="description">
+			<h1 id="heading">Tell us about the problems you face in your constituency</h1><br>
+			<hr>
+			<p class="demand_description">Enter below the issues that trouble you the most in your constituency.<br><br>
+				Select the category into which the issue falls from the dropdown & enter a specific description of what
+				the problem is.<br><br>
+				Ex :-<br>
+				<p id="example">
+					Lung problems are quite common in your area but there is no pulmonologist(doctor for treatment of
+					lung diseases)
+					at the Municipal Hospital in your constituency. Select the healthcare category from the dropdown
+					menu and write "No pulmonologist at XYZ Municipal Hospital" in the Description textbox.
+				</p>
+				<br>
+				<b class="demand_description">Note : </b> You can enter upto 10 entries only.
+			</p>
+		</div>
+
+		<div id="demands_input">
+
+			<div class="tab" style="display: block;">
+				<br>Entry 1<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" value="demandtext" name="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 2<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 3<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 4<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 5<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 6<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 7<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 8<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 9<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+
+			<div class="tab">
+				<br>Entry 10<br>
+				<div class="single_demand_input" style="display: flex;">
+					<div>
+						<select value="demandcategory" name="demandcategory" class="category_dropdown">
+							<option value="">Select Category</option>
+							<option value="mlml">mlml</option>
+							<option value="ma">ma</option>
+							<option value="pa">pa</option>
+							<option value="ni">ni</option>
+							<option value="sa">sa</option>
+						</select>
+					</div>
+					<textarea type="text" name="demandtext" value="demandtext"
+						placeholder="Add a brief & precise description of your demand..."></textarea><br><br>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="buttons">
+			<button id="add_more_button" onclick="new_demand();">Add more +</button>
+			<button id="submit_button">Submit</button>
+		</div>
+
+	</form>
+</div>
+{% endblock body_block %}

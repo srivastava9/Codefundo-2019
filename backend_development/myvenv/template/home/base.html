@@ -4,20 +4,22 @@
 
 <head>
   <link href="{% static 'css/home/navbar.css'%}" rel="stylesheet" type="text/css" />
-  <script href="{% static 'js/home/navbar.js'%}"></script>
+  <script src="{% static 'js/home/login.js'%}"></script>
   {% block css_script_block %} {% endblock %}
   <title>Voteright-{% block title_block %}Home{% endblock %}</title>
 
 </head>
 
 <body>
-
+  {% block navbar_block %}
   <div class="navbar">
+    <p>
+    </p>
     <a href=" "><img src="{% static 'images/logo.png' %}" alt="VOTERIGHT" class="logo" /></a>
     <ul class="navbar_ul">
-      <li class="navbar_li"><a href=" ">Candidate Profile</a></li>
+      <li class="navbar_li"><a href="{% url 'Candidate-Profile' %} ">Candidate Profile</a></li>
       <li class="navbar_li"><a href=" ">Popular Demands</a></li>
-      <li class="navbar_li"><a href=" ">Query & Problems</a></li>
+      <li class="navbar_li"><a href="{% url 'Query-Page' %} ">Query & Problems</a></li>
       <li class="navbar_li"><a href=" ">Contact Us</a></li>
       <li class="navbar_li">
         <a onclick="show_dropdownprofile()"><img src="{% static 'images/profile_photo.png' %}"
@@ -31,18 +33,18 @@
     <hr />
     <div class="dropdown_notification_body">
       <div class="each_notification_body">
-        <img class="profile_image"
-          src="/home/aditya/Desktop/Codefundo-2019/frontend_development/images/profile_photo.png" />
-        <p class="profile_name">Aditya Srivastava</p>
+        <img class="profile_image" src="{% static 'images/profile_photo.png' %}" />
+        <p class="profile_name">{{profile.user.first_name}}</p>
       </div>
-      <div class="dropdown_address">Gurhatta Patna City<br />Bihar</div>
+      <div class="dropdown_address">{{profile.District}}<br />{{profile.State}}</div>
     </div>
     <div class="dropdown_buttons">
       <button class="dropdown_each_button ">Edit Profile</button>
-      <button class="dropdown_each_button">Sign Out</button>
+      <a href="{% url 'logout' %}"><button class="dropdown_each_button">Sign Out</button></a>
     </div>
   </div>
   <div>
+    {% endblock %}
     {% block body_block %} here goes body part {% endblock %}
   </div>
 </body>

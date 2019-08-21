@@ -43,6 +43,7 @@ function open_signup() {
 	y.style.backgroundColor = '#FAFAFA';
 	y.style.color = '#596E78';
 }
+
 function show_dropdownprofile() {
 	var x = document.getElementById("dropdown_profile");
 	if (x.style.display == "block") {

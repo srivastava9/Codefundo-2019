@@ -1,0 +1,197 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+Profile Page
+{% endblock title_block %}
+
+{% block css_script_block %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="{% static 'css/home/profile_page1.css' %}" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif;
+  }
+</style>
+{% endblock css_script_block %}
+
+{% block body_block %}
+<!-- <body class="w3-light-grey"> -->
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="{% static 'images/nvmodi.jpg' %}" style="width:100%" alt="Avatar" />
+          <div>
+            <h3 class="candidate_name">Narendra Damodardas Modi</h3>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p class="party_name">
+            <img src="{% static 'images/bjp_logo.png' %}" class="party_logo" />
+            Bhartiya Janta Party
+          </p>
+          <hr />
+          <p class="w3-large">
+            <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>General Information</b>
+          </p>
+          <p class="age_profile">Age : 63 years</p>
+          <p class="parent_profile">S/o|D/o|W/o : Damodardas</p>
+          <hr />
+          <p class="adress_profile">
+            <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>C-1, Someshwar Tenament, Ranip,
+            Ahmedabad-382480, Gujarat
+          </p>
+          <p class="education_profile">
+            <i class="fa fa-book fa-fw w3-margin-right w3-large w3-text-teal"></i>Post Graduate<br />
+            MA From Gujarat University, Ahmedabad in 1983.<br />
+            BA From Delhi University,
+          </p>
+
+          <hr />
+
+          <p class="w3-large">
+            <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Assets</b>
+          </p>
+
+          <p>Total Movable Assets(Declared)</p>
+          <div class="assets_money_profile">
+            Rs 51,57,582
+          </div>
+
+          <p>Total Immovable Assets(Expected Value)</p>
+
+          <div class="assets_money_profile">Rs 1,00,00,000</div>
+
+          <p>Total Assets</p>
+
+          <div class="assets_money_profile">
+            Rs 1,51,57,582
+          </div>
+          <p>Total Income(Declared in ITR)</p>
+          <div class="assets_money_profile">
+            Rs 4,54,095
+          </div>
+
+          <br />
+        </div>
+      </div>
+
+      <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16">
+          <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience
+        </h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity">
+            <b>Prime Minister Of India</b>
+          </h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>26 May 2014 -
+            <span class="w3-tag w3-teal w3-round">Current</span>
+          </h6>
+          <p>
+            Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel
+            in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora
+            soluta ea et odio, unde doloremque repellendus iure, iste.
+          </p>
+          <hr />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Chief Minister | Gujarat</b></h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>7 Oct 2001 -
+            26 May 2014
+          </h6>
+          <p>
+            Consectetur adipisicing elit. Praesentium magnam consectetur vel
+            in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora
+            soluta ea et odio, unde doloremque repellendus iure, iste.
+          </p>
+          <hr />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity">
+            <b>Gujarat Council Of Ministers</b>
+          </h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 1998 -
+            May 2014
+          </h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <br />
+        </div>
+      </div>
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16">
+          <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Proposals
+        </h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Jammu & Kashmir - Article 370</b></h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Till Dec
+            2019
+          </h6>
+          <p>The Manifesto read: We are committed to annulling Article 35A of the Constitution of India as the provision
+            is discriminatory against non-permanent residents and women of Jammu and Kashmir. We believe that Article
+            35A is an obstacle in the development of the state. We will take all steps to ensure a safe and peaceful
+            environment for all residents of the state.</p>
+          <hr />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Reinforcing Border Security</b></h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Till 2024
+          </h6>
+          <p>The manifesto read: We have completed building six integrated check-posts with another under construction
+            to facilitate easier trade and travel from the neighboring countries. We will further ease the movement of
+            goods and people by constructing 14 more integrated check-posts by 2024. </p>
+          <hr />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Doubling farmers’ income</b></h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Till 2022
+          </h6>
+          <p>The manifesto read: At the very beginning of our current term, Prime Minister Modi embarked on a mission to
+            double farmers’ income. We will make all efforts to achieve this goal by 2022.</p>
+          <br />
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Citizenship Amendment Bill</b></h5>
+          <h6 class="w3-text-teal">
+            <i class="fa fa-calendar fa-fw w3-margin-right"></i>Till 2024
+          </h6>
+          <p>The manifesto read: We are committed to the enactment of the Citizenship Amendment Bill for the protection
+            of individuals of religious minority communities from neighbouring countries escaping persecution. </p>
+          <br />
+        </div>
+      </div>
+
+      <!-- End Right Column -->
+    </div>
+
+    <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+{% endblock %}
