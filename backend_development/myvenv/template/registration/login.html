@@ -46,6 +46,7 @@ Login-Page
             </div>
 
             <div id="login_form_box">
+                <p>{{errors}}</p>
                 <form id="login_form" method="POST">
                     {% csrf_token %}
 

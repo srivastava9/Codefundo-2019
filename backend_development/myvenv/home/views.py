@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 from django.contrib.auth import authenticate, login, logout
 from home.forms import UserForm, UserProfileForm, DemandcategoryForm
@@ -6,8 +6,10 @@ from django.contrib.auth.decorators import login_required
 from home.models import UserProfile, userdemandcategory
 
 # Create your views here.
-def login_page(request):
-    return render(request, "home/login.html", {})
+@login_required
+def profile(request):
+    userprofile = UserProfile.objects.get(user=request.user)
+    return render(request, "home/demands.html", {"profile": userprofile})
 
 
 def registered(request):
@@ -26,7 +28,8 @@ def registered(request):
             profile.save()
             registered = True
             login(request, user)
-            return user_demand(request)
+            return redirect("/home/user-demand")
+
         else:
             # user_errors = user_form.errors
             # profile_errors = profile_form.errors
@@ -56,7 +59,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 print(user)
-                return login_page(request)
+                return redirect("/home")
             else:
                 raise Http404(
                     "<strong>Your Account Has been Disabled.Please Register Again !</strong>"
@@ -73,7 +76,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    return login_page(request)
+    return profile(request)
 
 
 @login_required
@@ -88,7 +91,7 @@ def user_demand(request):
             demandtext=request.POST.get("demandtext"),
         )
 
-        return profile_page_candiadate(request)
+        return redirect("/home")
     else:
         categoryform = DemandcategoryForm()
 

@@ -23,8 +23,8 @@ class UserProfile(models.Model):
 
 class userdemandcategory(models.Model):
     user = models.ForeignKey(User)
-    demandcategory = models.CharField(max_length=120)
-    demandtext = models.CharField(max_length=255)
+    demandcategory = models.CharField(max_length=120, null=True, blank=True)
+    demandtext = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return self.demandcategory
