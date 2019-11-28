@@ -1,5 +1,5 @@
 # VoteRight
-
+## Second Runner-Up from IIT Roorkee
 _Application to know your Candidates better and Increase Effective Dialogue with them_
 
 ## Features
